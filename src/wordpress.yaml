@@ -1,8 +1,8 @@
 ---
 - name: Wordpress Install
   hosts: demo 
-  become: true
-  gather_facts: true
+  become: true # para obtener permisos de superusuario  - Elevación de Privilegios
+  gather_facts: true # para obtener información del sistema 
   
   #  vars:
   #    mysql_root_password: mypassword 

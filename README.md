@@ -19,7 +19,7 @@ git clone https://github.com/tiagomedi/ansible_playbooks.git
 ### Instalación
 
 ```bash
-pipx install --include-deps ansible
+pip3 install ansible
 ```
 
 ### Instalar pre-requisitos
@@ -65,6 +65,8 @@ Al Iniciar el servidor crea en la raiz del proyecto un archivo llamado `inventor
 Al eliminar el servidor con `make stop` o `multipass delete demo` se eliminara la VM pero no el directorio `.ssh` ni el archivo `inventory.ini`.
 
 ### `inventory.ini`
-Es un archivo de texto plano que contiene la ip de la VM y las credenciales de acceso.
+Es un archivo de texto plano que contiene la ip de la VM y las credenciales de acceso. En otras palabras, es una lista del inventario que estamos manejando. 
 
-Existe dos formas, una de ellas es `inventory.ini`, pero la otra es `inventory.yaml` siendo esta ultima la mas recomendada para entornos mas complejos.
+Tambien existe el inventario dinamico que es un archivo que se encarga de obtener la ip de la VM automaticamente, en caso de tener varias VMs se crea dinamicamente.
+
+Finalmente, existen dos formas de manejar el inventario, una de ellas es `inventory.ini`, pero la otra es `inventory.yaml` siendo esta ultima la mas moderna y la mas recomendada para entornos mas complejos.
